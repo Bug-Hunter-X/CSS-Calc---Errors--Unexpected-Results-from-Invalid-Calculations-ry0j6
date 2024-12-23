@@ -1,0 +1,9 @@
+The CSS property `calc()` is used to perform calculations within CSS. However, if you make a mistake in the calculation, it could cause unexpected behavior. For example, if you try to subtract a larger value from a smaller value, you'll get a negative value. Depending on the property, a negative value might be ignored or might produce unintended results. This can be very difficult to debug if you don't know that there's a problem with your calculation.  Example:
+
+```css
+.element {
+  width: calc(100px - 200px);
+}
+```
+
+This will result in a `width` of `0px`, not `-100px`.  Other properties, like `margin` might collapse in unexpected ways.  Always double-check your `calc()` expressions. 
